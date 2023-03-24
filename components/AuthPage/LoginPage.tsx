@@ -39,19 +39,19 @@ export function LoginPage({ registerInstead }) {
     return true;
   };
 
-  const fetchCustomers = async () => {
-    await fetch("https://damsy-landing.vercel.app/api/list-customers", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setStripeSubs(res.subscriptions.data);
-      });
-  };
+  // const fetchCustomers = async () => {
+  //   await fetch("https://damsy-landing.vercel.app/api/list-customers", {
+  //     method: "GET",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       setStripeSubs(res.subscriptions.data);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchCustomers();
-  },[]);
+  // useEffect(() => {
+  //   fetchCustomers();
+  // },[]);
 
   const loginAccount = async () => {
     if (validated()) {

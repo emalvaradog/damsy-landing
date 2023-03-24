@@ -36,20 +36,20 @@ export function ExcelAIPage() {
   const [stripeUsers, setStripeUsers] = useState([]);
   const [stripeSubs, setStripeSubs] = useState([]);
 
-  useEffect(() => {
-    const fetchCustomers = async () => {
-      await fetch("https://damsy-landing.vercel.app/api/list-customers", {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          setStripeUsers(res.customers.data);
-          setStripeSubs(res.subscriptions.data);
-        });
-    };
+  // useEffect(() => {
+  //   const fetchCustomers = async () => {
+  //     await fetch("https://damsy-landing.vercel.app/api/list-customers", {
+  //       method: "GET",
+  //     })
+  //       .then((res) => res.json())
+  //       .then((res) => {
+  //         setStripeUsers(res.customers.data);
+  //         setStripeSubs(res.subscriptions.data);
+  //       });
+  //   };
 
-    fetchCustomers();
-  }, []);
+  //   fetchCustomers();
+  // }, []);
 
   useEffect(() => {
     if (loading) {
